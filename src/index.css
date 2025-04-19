@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #FFDA00;
+  --color-secondary: #004AAD;
+  --color-accent: #C8102E;
+  --color-text: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text);
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary;
+  }
+  
+  .btn-primary {
+    @apply bg-secondary text-white font-bold inline-block px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px];
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-secondary border-2 border-secondary font-bold inline-block px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px];
+  }
+}
+
+.bg-hero-pattern {
+  background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+}
